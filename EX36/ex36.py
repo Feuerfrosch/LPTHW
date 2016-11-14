@@ -261,7 +261,7 @@ def kitchen(candle_status, crowbar_status, gun_status, score_status, insanity_st
         elif ("back" in choice) or ("right" in choice):
             start(candle, crowbar, gun, score, insanity, lights)
         else:
-            "I don't know what that means."
+            print "I don't know what that means."
 
 
 
@@ -296,7 +296,7 @@ def start(candle_status, crowbar_status, gun_status, score_status, insanity_stat
         living_room(candle, crowbar, gun, score, insanity, lights)
     elif ("up" in choice) or ("stairway" in choice):
         first_floor(candle, crowbar, gun, score, insanity, lights)
-    elif ("forward" in choice) or ("hallway" in choice) or ("down" in choice) :
+    elif ("forward" in choice) or ("hallway" in choice) or ("down" in choice) or ("end" in choice):
         cellar_one(candle, crowbar, gun, score, insanity, lights)
     else:
         print "You can't go that way!", start(candle, crowbar, gun, score, insanity, lights)
