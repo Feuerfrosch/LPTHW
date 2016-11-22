@@ -1,3 +1,5 @@
+# lexical analyzer (google, siri, chatbots, programming languages have things like this in it)
+
 lexicon = {
 'north': 'direction',
 'south': 'direction',

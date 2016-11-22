@@ -1,15 +1,17 @@
+import scenes
+
 class Map(object):
 
     scenes = {
-        'singapore' : Singapore(),
-        'mumbai' : Mumbai(),
-        'kairo' : Kairo(),
-        'bucharest' : Bucharest(),
-        'rome' : Rome(),
-        'london' : London(),
-        'trondheim' : Trondheim(),
-        'death' : Death(),
-        'finished' : Finished(),
+        'singapore' : scenes.Singapore(),
+        'mumbai' : scenes.Mumbai(),
+        'kairo' : scenes.Kairo(),
+        'bucharest' : scenes.Bucharest(),
+        'rome' : scenes.Rome(),
+        'london' : scenes.London(),
+        'trondheim' : scenes.Trondheim(),
+        'death' : scenes.Death(),
+        'finished' : scenes.Finished(),
     }
 
     def __init__(self, start_scene):
@@ -21,7 +23,3 @@ class Map(object):
 
     def opening_scene(self):
         return self.next_scene(self.start_scene)
-
-a_map = Map('singapore')
-a_game = Engine(a_map)
-a_game.play()

@@ -1,3 +1,10 @@
+class Scene(object):
+
+    def enter(self):
+        print "This is the parent scene class! And the template enter function."
+
+        exit(1)
+
 class Death(Scene):
 
     def enter(self):
