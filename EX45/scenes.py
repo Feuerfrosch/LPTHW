@@ -1,3 +1,6 @@
+from sys import exit
+from random import randint
+
 class Scene(object):
 
     def enter(self):

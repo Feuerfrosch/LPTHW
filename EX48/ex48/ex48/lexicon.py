@@ -15,23 +15,23 @@ lexicon = {
 'princess': 'noun'
     }
 
-def scan(sentence):
-    words = sentence.split()
-    result = []
+    def scan(sentence):
+        words = sentence.split()
+        result = []
 
-    for word in words:
+        for word in words:
+            try:
+                result.append((lexicon[word.lower()], word))
+            except KeyError:
+                if convert_number(word) != None:
+                    result.append(('number', int(word)))
+                else:
+                    result.append(('error', word))
+
+                    return result
+
+    def convert_number(s):
         try:
-            result.append((lexicon[word.lower()], word))
-        except KeyError:
-            if convert_number(word) != None:
-                result.append(('number', int(word)))
-            else:
-                result.append(('error', word))
-
-    return result
-
-def convert_number(s):
-    try:
-        return int(s)
-    except ValueError:
-        return None
+            return int(s)
+        except ValueError:
+            return None
