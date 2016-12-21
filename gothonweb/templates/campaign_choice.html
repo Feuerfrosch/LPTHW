@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1> {{ "You have the choice:" }} </h1>
+<pre>{{ "Choose between humans and gothons!
+Just type in human or gothon to get started!" }}</pre>
+  <p>
+    <form action="/game" method="POST">
+      What will your choice be? <input type="text" name="choice"> <input type="SUBMIT">
+    </form>
+  </p>
+<img src="http://cdn.images.express.co.uk/img/dynamic/80/590x/Alien-Hybrids-665645.jpg"/>
+{% endblock %}

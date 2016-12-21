@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% if scene %}
+  <h1> {{ scene. title }} </h1>
+  <pre>{{ scene.description }}</pre>
+  {% if ("death" in scene.urlname) or ("loser" in scene.urlname) %}
+    <p><a href="/">Play Again?</a></p>
+  {% elif "winner" in scene.urlname %}
+    <p><a href="/">New Game Plus?</a</p>
+  {% else %}
+    <p>
+      <form action="/game" method="POST">
+        What do you do? If you need help, simply spell "help" :)! <input type="text" name="userinput"> <input type="SUBMIT">
+      </form>
+    </p>
+  {% endif %}
+{% else %}
+  <p><a href="/">Start at the Beginning</a></p>
+{% endif %}
+<img src="https://lh6.googleusercontent.com/-UUnCTamsMNo/TXRGOOvxvnI/AAAAAAAAArY/psesZKPG8so/s1600/Nova_Fires_jpg.jpg"/>
+{% endblock %}
